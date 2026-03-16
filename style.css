@@ -1,0 +1,227 @@
+﻿/* --- STYL PODSTAWOWY DLA OBRONY PROJEKTU --- */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Delikatny, bardzo jasny niebieski dla tła */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #1e3a8a; /* Ciemnoniebieski z palety */
+    margin-top: 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #bfdbfe; /* Jasnoniebieska linia oddzielająca */
+    margin: 15px 0;
+}
+
+/* --- KONTENERY I LAYOUT --- */
+.login-container {
+    width: 400px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #93c5fd; /* Jasnoniebieski brzeg pudełka ze zgloszeniami i okna logowania */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+    text-align: center;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.custom-box {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.05);
+}
+
+/* --- NAWIGACJA GORNA --- */
+.navbar {
+    background: #1e40af; /* Głęboki, uniwersytecki granat */
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #3b82f6; /* Podkreślenie jasniejszym niebieskim */
+}
+
+/* Styl dla Logo Uczelni umieszczonego w .user-info na gorze */
+.navbar .user-info {
+    font-size: 1.1em;
+    display: flex;
+    align-items: center; /* Wyśrodkowanie tekstu z logiem w pionie */
+    gap: 15px; /* Odstep logo od tekstu zapraszajacego */
+}
+
+.uni-logo {
+    height: 45px; /* Wysokość loga dopasowana do paska gornego */
+    width: auto;
+    background: #fff;
+    padding: 2px 6px;
+    border-radius: 4px; /* Ladne, male tlo pod przezroczystym obrazkiem PNG wg standardu */
+}
+
+.navbar a.btn {
+    margin-left: 10px;
+}
+
+/* --- FORMULARZE --- */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1e3a8a; /* Ciemnoniebieski etykiety form */
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #93c5fd;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif;
+    transition: 0.2s border;
+}
+
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* --- PRZYCISKI --- */
+.btn {
+    display: inline-block;
+    background: #2563eb; /* Uniwersalny Niebieski Przycisk akceptacji */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #1d4ed8; 
+}
+
+.alt-btn {
+    background: #ebf8ff; /* Jasnoniebieski przycisk alternatywny np. dla uzywanej nawigacji */
+    color: #1e40af;
+    border: 1px solid #90cdf4;
+}
+.alt-btn:hover {
+    background: #bee3f8;
+}
+
+.text-danger { background: #ef4444; color: #fff; border: 0;}
+.text-danger:hover { background: #dc2626; }
+
+/* --- LISTA ZGLOSZEN (WYGLAD WYNIKOW) --- */
+.issue {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #3b82f6; /* Wyróżniający brzeg po lewej stronie zgloszenia */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.admin-card {
+    border-left: 4px solid #6366f1; /* Inny odcien dla strony admina celowo zeby sie odrózaniało delikatnie na uczelni */
+}
+
+.issue-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.issue-loc {
+    color: #64748b;
+    font-size: 0.9em;
+    margin: 5px 0 10px 0;
+}
+
+.issue-desc {
+    margin: 0;
+    line-height: 1.4;
+    color: #1e293b;
+}
+
+/* --- DODATKI I ALERTY --- */
+.badge {
+    background: #1e3a8a;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.answer {
+    margin-top: 10px;
+    padding: 10px;
+    background: #dbeafe; /* Tło komentarza zwrotnego zrobione na niebiesko */
+    border-left: 4px solid #2563eb;
+    font-style: italic;
+    color: #1e40af;
+}
+
+.success-box {
+    background: #ecfdf5;
+    color: #065f46;
+    padding: 10px;
+    border: 1px solid #a7f3d0;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.error-box, .error {
+    background: #fef2f2;
+    color: #991b1b;
+    padding: 10px;
+    border: 1px solid #fecaca;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.test-accounts {
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: #475569;
+    background: #f8fafc;
+    padding: 15px;
+    border: 1px dashed #cbd5e1;
+    text-align: left;
+}
+
+.test-accounts ul {
+    margin: 5px 0 0 0;
+    padding-left: 20px;
+}
